@@ -168,7 +168,7 @@ p {
 	        </li>
 	
           <li class="nav-item mr-3 dropdown">
-            <a class="nav-link text-white" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Our recomendation
+            <a class="nav-link text-white"dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Our recomendation
               <span class="caret"></span>
               <i class="fas fa-angle-down"></i>
             </a>
@@ -184,7 +184,7 @@ p {
     </nav>
 	
     <div id="imagenPrincipal" class="carousel slide" data-ride="carousel">
-      <img src="https://www.barcelo.com/es/images/275-views-06-hotel-barcelo-malaga_tcm7-109397_w1600_n.jpg" alt="First slide" width="100%" height="500">
+      <img src="https://farm5.staticflickr.com/4877/46301419102_5ba04bbded_b.jpg" alt="First slide" width="1360" height="500">
     </div>
   </header>
   
@@ -359,6 +359,3 @@ p {
 </html>
 
     
-
-      
-      
