@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Esta opcion es la mas sencilla con un widget, tendriamos ahora que ponerlo en el lugar que veamos
+        (advierto que me ha dodo problemas al buscarle posicion, tambien es cierto que no he tocado mucho boostrap -->
+
+    
+            <div id="openweathermap-widget-24"></div>
+
+            <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                window.myWidgetParam.push({id: 24, cityid: '2514256', appid: '839256392c6f30efe6bcb631b1e1fc14', units: 'metric', containerid: 'openweathermap-widget-24', });
+                (function () {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.charset = "utf-8";
+                    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(script, s);
+                })
+                        ();
+            </script>
+
+    </body>
