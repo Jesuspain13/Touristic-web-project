@@ -1,0 +1,40 @@
+
+
+.imagenCatedral{
+  border: #5DADE2 5px double;
+  padding: 1em;
+  margin: 2em 2em 2em 2em;
+  width: 800px;
+  height: 350px;
+  margin-left: 17rem;
+
+}
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  font: Comic Sans MS,arial,verdana;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  text-align:center;
+}
+  
+<div class=" imagenCatedral">
+    <p><img style="float: left; margin: 0px 10px 10px 0px;" 
+            src="https://farm5.staticflickr.com/4807/31405795247_6810dda5e0_b.jpg" 
+            width="400" height="300" /> 
+        <h1>
+        Santa Iglesia Catedral 
+        Basílica de la Encarnación</h1>
+        
+        <p> LLamada  cariñosamente por los malagueños “La Manquita”.
+        Situada en la plaza del Obispo. 
+        Construida entre los siglos 
+        XVI y XVIII sobre la Mezquita Mayor de la ciudad.
+        Es considerada una de las joyas renacentistas 
+        más valiosas de Andalucía.</p>
+      
+  <br style="clear: both;" /></p>
+</div>
