@@ -114,11 +114,25 @@ body {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+@media (min-width: 300px) {
+  body {
+    font-size: 0.60rem;
+  }
 
-@media (min-width: 640px) {
+  #logoMalaga {
+    width:40%;
+  }
+
+  .dropdown-menu {
+    font-size: 0.6rem;
+  }
+}
+
+
+@media (min-width: 420px) {
   /* Bump up size of carousel content */
   body {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .featurette-heading {
@@ -127,6 +141,18 @@ body {
 }
 
 @media (min-width: 640px) {
+    body {
+    font-size: 1rem;
+  }
+
+  #logoMalaga {
+    width:70%;
+  }
+
+  .dropdown-menu {
+    font-size: 1rem;
+  }
+
   .featurette-heading {
     margin-top: 7rem;
   }
@@ -142,6 +168,15 @@ body {
   width: 100%;
 }
 
+.position-fixed {
+  z-index: 1;
+}
+
+#mostrarLugar, #mostrarFechaConstruccion, #mostrarArquitecto {
+  display: none;
+}
+
+
 
     </style>
   </head>
@@ -152,7 +187,7 @@ body {
     <nav class="navbar navbar-expand-lg navbar-light position-absolute" id="menuNavbar">
       <div class="container">
         <a class="navbar-brand">
-          <img src="http://s3.malagaturismo.com/pictures/3336/3336/logo-malaga-turismo.png" width="100%">
+          <img id="logoMalaga" src="http://s3.malagaturismo.com/pictures/3336/3336/logo-malaga-turismo.png" width="100%">
         </a>
           
         <ul class="navbar-nav text-uppercase ml-auto">
@@ -165,8 +200,9 @@ body {
               <span class="caret"></span>
               <i class="fas fa-angle-down"></i>
             </a>
-            <ul id="dropdown-menu-recomended" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            </ul>
+              <ul id="dropdown-menu-recomended" class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown">
+              </ul>
+
 	        </li>
 	
           <li class="nav-item"> 
@@ -181,19 +217,18 @@ body {
     </div>
   </header>
   
-
-  <div id="contenedorPrincipal" class="container mb-5">
-    <div class="row justify-content-center pb-3">
-      <div class="col-3 mr-auto">
-        <h1 class="display-3">Inicio</h1>
-      </div>
-      <div class="col-4 border-left border-dark pl-3 align-items-center">
-        <p>Esta página web ha sido realizada por alumnos del curso de desarrollo de aplicaciones multiplataforma.</p>
+  <main role="main">
+    <div id="contenedorPrincipal" class="container mb-5">
+      <div class="row justify-content-center pb-3">
+        <div class="col-3 mr-auto">
+          <h1 class="display-3">Inicio</h1>
+        </div>
+        <div class="col-4 border-left border-dark pl-3 align-items-center">
+          <p>Esta página web ha sido realizada por alumnos del curso de desarrollo de aplicaciones multiplataforma.</p>
+        </div>
       </div>
     </div>
-  </div>
 
-<main role="main">
     <div class="container">
       <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -229,82 +264,27 @@ body {
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container mb-3">
-        <div class="row">
-          Donde monstaremos el contenido de los botones por javascript. (lugar y un poco de informacion mas detallada.)
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="container marketing">
 
         <!-- Three columns of text below the carousel -->
-        <div class="row">
+      <div class="container marketing">
+        <div class="row mt-4">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <h2>Situación</h2>
+            <p><a id="controladorMostrarLugar" class="btn btn-secondary" href="javascript:void()" role="button">View details &raquo;</a></p>
+            <p id="mostrarLugar" ></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <h2>Etapa de construcción</h2>
+            <p><a id="controladorMostrarFecha" class="btn btn-secondary" href="javascript:void()" role="button">View details &raquo;</a></p>
+            <p id="mostrarFechaConstruccion"></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <h2>Arquitecto</h2>
+            <p><a id="controladorMostrarArquitecto" class="btn btn-secondary" href="javascript:void()" role="button">View details &raquo;</a></p>
+            <p id="mostrarArquitecto"></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
-
-
-        <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
-
-      </div><!-- /.container -->
+      </div>
 
 
       <!-- FOOTER -->
