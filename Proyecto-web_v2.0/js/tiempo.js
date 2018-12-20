@@ -13,6 +13,7 @@ app.cargaDatos = function(){
 		}
 	});
 }
+
 app.procesaDatos = function(){
 	app.condicionNombre = app.datos.weather[0].main;
 	app.temperatura = app.datos.main.temp;
@@ -20,18 +21,19 @@ app.procesaDatos = function(){
 	app.icono = app.obtenIcono( condicionIcono );
 	app.muestra();
 } 
+
 app.muestra = function(){
 	//$('#js_w_temp').append("<p class='weather_temperature'>" +  app.temperatura + "</p>");
 	//$('#js_w_icon').append(" <i class='wi " + app.icono + "'></i>");
 	//$('#js_w_icon').append("<p class='weather_name'>" +  app.condicionNombre.toUpperCase() + "</p>");
-	$('#mostrarTiempo').html(`<p class='weather_temperature'> ${app.temperatura}℃  | <i class='wi ${app.icono}'></i></p>`)
+	$('#mostrarTiempo').html(`<p class='weather_temperature'> ${app.temperatura}℃ | <i class='wi ${app.icono}'></i></p>`)
 }
 app.obtenIcono = function( weatherIcon ) {
 	var icon;
 	switch( weatherIcon ){
 		case "01d":
 		case "01n":
-		icon = "wi-day-clear";
+		icon = "wi-day-sunny";
 		break;
 		case "02d":
 		case "02n":
@@ -47,7 +49,7 @@ app.obtenIcono = function( weatherIcon ) {
 		break;
 		case "09d":
 		case "09n":
-		icon = "wi-rain";
+		icon = "wi-day-rain";
 		break;
 		case "10d":
 		case "10n":
@@ -59,11 +61,11 @@ app.obtenIcono = function( weatherIcon ) {
 		break;
 		case "13d":
 		case "13n":
-		icon = "wi-snow";
+		icon = "wi-day-snow";
 		break;
 		case "50d":
 		case "50n":
-		icon = "wi-fog";
+		icon = "wi-day-fog";
 		break;
 		default:
 		icon = "wi-day-sunny";

@@ -2,7 +2,7 @@ var modeloCatedral = {};
 
 //definimos con key-value, los atributos que va a tener el modelo
 modeloCatedral.nombre = "Catedral de Málaga";
-modeloCatedral.construccion = "S.XVI - s.XVIII. No obstante se encuentra inacabada por la desviación de fondos que se produjo.";
+modeloCatedral.construccion = "S.XVI - s.XVIII. No obstante se encuentra inacabada por la desviación de fondos que se produjo en la época.";
 modeloCatedral.arquitecto = "Diego de Siloé";
 modeloCatedral.descripción = "Llamada  cariñosamente por los malagueños La Manquita. Situada en la plaza del Obispo. Construida entre los siglos XVI y XVIII sobre la Mezquita Mayor de la ciudad. Es considerada una de las joyas renacentistas más valiosas de Andalucía.";
 modeloCatedral.urllugar = "https://www.google.com/maps/place/Calle+Molina+Lario,+29015+M%C3%A1laga/@36.7201228,-4.4206855,18.3z/data=!4m5!3m4!1s0xd72f795119e824b:0x2da7684bb7377154!8m2!3d36.7199968!4d-4.4200992";

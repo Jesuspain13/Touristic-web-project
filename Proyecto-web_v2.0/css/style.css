@@ -128,6 +128,10 @@ a, a:hover {
   .dropdown-menu {
     font-size: 0.6rem;
   }
+
+  .weather_temperature {
+    color: white;
+  }
 }
 
 
@@ -143,6 +147,10 @@ a, a:hover {
 
   .display-3 {
     font-size: 2rem;
+  }
+
+  .weather_temperature {
+    color: white;
   }
 
   .featurette-heading {
@@ -170,6 +178,10 @@ a, a:hover {
 
   .dropdown-menu {
     font-size: 1rem;
+  }
+
+  .weather_temperature {
+    color: white;
   }
 
   .featurette-heading {
@@ -200,9 +212,6 @@ a, a:hover {
   width: 100%;
 }
 
-.position-fixed {
-  z-index: 1;
-}
 
 #mostrarLugar, #mostrarFechaConstruccion, #mostrarArquitecto {
   display: none;
